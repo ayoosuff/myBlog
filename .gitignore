@@ -1,0 +1,13 @@
+nbproject
+
+app/bootstrap*
+app/cache/*
+app/logs/*
+app/config/parameters.ini
+
+vendor/
+
+web/bundles/
+
+public/.htaccess
+
