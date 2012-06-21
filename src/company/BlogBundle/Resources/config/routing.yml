@@ -1,0 +1,5 @@
+companyBlogBundle_homepage:
+    pattern:  /
+    defaults: { _controller: companyBlogBundle:Page:index }
+    requirements:
+        _method:  GET

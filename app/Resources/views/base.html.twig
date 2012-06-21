@@ -3,11 +3,40 @@
     <head>
         <meta charset="UTF-8" />
         <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+<link href="/less/bootstrap.less" rel="stylesheet/less" />
+<script src="/js/less.js"></script>
+ 
         <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
-        {% block body %}{% endblock %}
+    <div class="row">
+        <div class="span12">
+            {% block navigation %}
+                        <nav>
+                            <ul class="navigation">
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </nav>
+             {% endblock %}
+        </div>
+    </div>   
+    <div class="row">
+        <div class="span8">{% block body %}{% endblock %}</div>
+        <div class="span4">{% block sidebar %}{% endblock %}</div>
+    </div>
+    <div class="row">
+        <div class="span12">
+        {% block footer %}
+                    Symfony2 blog tutorial - created by <a href="https://github.com/dsyph3r">dsyph3r</a>
+         {% endblock %}
+        </div>
+    </div>  
+
+
+  
         {% block javascripts %}{% endblock %}
     </body>
 </html>
+
